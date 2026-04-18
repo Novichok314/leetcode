@@ -6,14 +6,13 @@ class TreeNode:
 
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> list[int]:
-        if not root: return []
         ans = []
         def ord(root):
-            if not root.left and not root.right:
-                ans.append(root.val)
+            if not root:
                 return 
-            if root.left: ord(root.left)
+            
+            ord(root.left)
             ans.append(root.val)
-            if root.right: ord(root.right)
+            ord(root.right)
         ord(root)
         return ans
