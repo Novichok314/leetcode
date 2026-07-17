@@ -1,21 +1,15 @@
-kname: ci
-on: pull_request:
+# .github/workflows/ci.yml
+name: CI
+on: [pull_request]
+
 jobs:
-  lint_and_check:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        wihth:
-          python-version: 3.12 
-      - run pip install -r requirements.txt
-      - run ruff check topics/ 
-            - name: Check file naming
-        run: |
-          for f in $(find topics -name "*.py"); do
-            base=$(basename "$f" .py)
-            if ! [[ "$base" =~ ^[0-9]+$ ]]; then
-              echo "Invalid filename: $f (must be a task number, e.g. 104.py)"
-              exit 1
-            fi
-          done
+        with:
+          python-version: "3.12"
+      - run: pip install ruff pytest
+      - run: ruff check topics/
+      - run: pytest topics/ -v
