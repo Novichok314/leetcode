@@ -10,7 +10,8 @@ class ListNode:
 
 class Solution:
     def removeNthFromEnd(self, head, n: int):
-        if not head.next: return None
+        if not head.next: 
+            return None
         dummy_node =  ListNode(0)
         dummy_node.next = head
         slw_ptr = dummy_node
