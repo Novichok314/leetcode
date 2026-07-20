@@ -1,4 +1,4 @@
-from topics.linked_lists.easy.problem_21 import Solution, ListNode
+from topics.linked_lists.easy.problem_21 import Solution
 
 
 def test():
