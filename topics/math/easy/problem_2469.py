@@ -12,4 +12,4 @@ class Solution:
 
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.convertTemperature(30))  # Output: [303.15, 86.0]
+    print(solution.convertTemperature(-40))  # Output: [303.15, 86.0]
