@@ -1,4 +1,5 @@
-from topics.linked_lists.easy.problem_141 import Solution, ListNode
+from topics.linked_lists.easy.problem_141 import ListNode, Solution
+
 
 def test():
     solution = Solution()

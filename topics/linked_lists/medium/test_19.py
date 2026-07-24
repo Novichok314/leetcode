@@ -1,4 +1,4 @@
-from topics.linked_lists.medium.problem_19 import Solution, ListNode
+from topics.linked_lists.medium.problem_19 import ListNode, Solution
 
 
 def list_to_linked(values):

@@ -1,4 +1,5 @@
 import pytest
+
 from topics.math.easy.problem_2469 import Solution
 
 
